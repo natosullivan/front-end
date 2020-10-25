@@ -1,4 +1,4 @@
-﻿pipeline {
+pipeline {
     agent any
 
     stages {
@@ -13,7 +13,6 @@
         stage('Package') {
             echo 'Packaging...'
             sh 'npm run package'
-            archiveArtifacts artifacts '**/distribution/*.zip', fingerprint: true
         }
     }
 }
